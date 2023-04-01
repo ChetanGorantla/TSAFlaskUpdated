@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Doctor</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <table class = "table">
+            <tr>
+                
+                <td>
+                    <nav>
+                        <ul style="margin-left: 75px; ">
+                            <li><a href="{{ url_for('views.index') }}" class= "nav-text">Home</a></li>
+                            <li><a href="{{ url_for('views.gendisease') }}" class= "nav-text">General Disease</a></li>
+                            <li><a href="{{ url_for('views.diabetes') }}" class= "nav-text">Diabetes</a></li>
+                            <li><a href="{{ url_for('views.hospital') }}" class= "nav-text">Hospital Tracker</a></li>
+                            
+                        </ul>
+                    </nav>
+                </td>
+                
+            </tr>
+    
+        </table>
+    </header>
+    
+	
+	<main>
+		
+	</main>
+
+	<footer>
+		
+        
+	</footer>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Doctor</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <table class = "table">
+            <tr>
+                
+                <td>
+                    <nav>
+                        <ul style="margin-left: 75px; ">
+                            <li><a href="{{ url_for('views.index') }}" class= "nav-text">Home</a></li>
+                            <li><a href="{{ url_for('views.gendisease') }}" class= "nav-text">General Disease</a></li>
+                            <li><a href="{{ url_for('views.diabetes') }}" class= "nav-text">Diabetes</a></li>
+                            <li><a href="{{ url_for('views.hospital') }}" class= "nav-text">Hospital Tracker</a></li>
+                            
+                        </ul>
+                    </nav>
+                </td>
+                
+            </tr>
+    
+        </table>
+    </header>
+    
+	
+	<main class = "bkg-img-main" style="padding: 580px;">
+		<a class = "about-text">KGK Diagnostics is a revolutionary medical technology which can effectively diagnose you with common diseases and diabetes. Along with this functionality, we offer a hospital locator for areas with lack of easy access to navigation systems. Our goal is to promote the health of our users by using models which run on artificial intelligence and machine learning. Through these developments, we hope that medical care can be offered to anyone around the world regardless of income, background, or other underlying factors.</a>
+	</main>
+
+
+</body>
+</html>
