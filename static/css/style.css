@@ -222,3 +222,12 @@ h1.blue-color {
     font-size: 20px;
     
 }
+
+input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Poppins'
+    
+  }
