@@ -8,7 +8,9 @@ body {
 }
 
 p{
-    color:#08344c
+    color:#08344c;
+    z-index: 1;
+    
 }
 
 header {
@@ -49,9 +51,11 @@ main {
 }
 
 footer {
-	background-color: #fff;
-	color: #fff;
+	
+	color: #bebebe;
 	padding: 10px;
+    position:absolute;
+    bottom: 0;
 	text-align: center;
 }
 
@@ -95,7 +99,9 @@ footer {
     font-family: 'Poppins';
     
     
+    
 }
+
 
 .table3 {
     border-collapse: collapse;
@@ -103,7 +109,7 @@ footer {
     background-color: #fff;
     font-size: 30px;
     font-family: 'Poppins';
-    margin-left: -110px;
+    
     
     
 }
@@ -245,21 +251,37 @@ input[type="number"] {
 }
 
 /* Style the dropdown button */
+.dropdown{
+    display: inline-block;
+}
+
 .dropdown-btn {
-    background-color: #f1f1f1;
+    background-color: #bebebe;
     border: none;
     color: #08344c;
     padding: 10px;
     font-size: 16px;
     cursor: pointer;
+    z-index: 1;
   }
   
   /* Style the dropdown content (hidden by default) */
   .dropdown-content {
     display: none;
-    position: absolute;
-    z-index: 1;
-    left: 1;
+    z-index: 2;
+    align-self: center;
+    position:fixed;
+    background-color: #f1f1f1;
+    height: 200px;
+    overflow-y: auto;
+  }
+
+  .dropdown-content span {
+    color: #08344c;
+    padding: 12px 16px;
+    display: block;
+    cursor: pointer;
+    margin:auto;
   }
   
   /* Show the dropdown content when the dropdown button is clicked */
@@ -277,17 +299,12 @@ input[type="number"] {
   
   /* Change the background color of the dropdown menu items on hover */
   .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color:#fff;
   }
 
-  .dropdown-content span {
-    color: #08344c;
-    padding: 12px 16px;
-    display: block;
-    cursor: pointer;
-  }
+
   
   /* Change the background color of the dropdown menu items on hover */
   .dropdown-content span:hover {
-    background-color: #f1f1f1;
+    background-color: #c9c9c9;
   }
