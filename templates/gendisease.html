@@ -16,7 +16,7 @@
                             <li><a href="{{ url_for('views.index') }}" class= "nav-text">Home</a></li>
                             <li><a href="{{ url_for('views.gendisease') }}" class= "nav-text">General Disease</a></li>
                             <li><a href="{{ url_for('views.diabetes') }}" class= "nav-text">Diabetes</a></li>
-                            <li><a href="{{ url_for('views.hospital') }}" class= "nav-text">Hospital Tracker</a></li>
+                            <li><a href="{{ url_for('get_hospitals') }}" class= "nav-text">Hospital Tracker</a></li>
                             
                         </ul>
                     </nav>
@@ -30,283 +30,291 @@
 	
 	<main>
 		<a class = "about-text">Please input any symptoms you may have.</a>
-        <table class = "table2">
-            <tr>
-                <td>
-                    <p>Integumentary System (Skin, Hair)</p>
-
-                    <table class = "table2">
-                        <tr>
-                            
-                            <td>
-                                <div class="dropdown">
-                                    <input type="button" class="dropdown-btn" value="Select Symptoms">
-                                    <div class="dropdown-content">
-                                        <span>Itching</span>
-                                        <span>Skin Rash</span>
-                                        <span>Nodal Skin Eruptions</span>
-                                        <span>Cold Hands and Feet</span>
-                                        <span>Yellowish Skin</span>
-                                        <span>Puffy Face and Eyes</span>
-                                        <span>Brittle Nails</span>
-                                        <span>Swollen Extremeties</span>
-                                        <span>Blister</span>
-                                        <span>Inflammatory Nails</span>
-                                        <span>Small Dents in Nails</span>
-                                        <span>Skin Peeling</span>
-                                        <span>Pus Filled Pimples</span>
-                                        <span>Blackheads</span>
-                                        <span>Scurring</span>
-                                        <span>Red Spots Over Body</span>
-                                        <span>Dischromic Patches</span>
-                                        
-                                    </div>
-                                  </div>
-                            </td>
-                        </tr>
-                    </table>
-
-                </td>
-                <td>
-                    <p>Digestive System (Stomach, Liver)</p>
-                    <table class = "table2">
-                        <tr>
-                            
-                            <td>
-                                <div class="dropdown">
-                                    <input type="button" class="dropdown-btn" value="Select Symptoms">
-                                    <div class="dropdown-content">
-                                        <span>Stomach Pain</span>
-                                        <span>Acidity</span>
-                                        <span>Ulcers on Tongue</span>
-                                        <span>Vomiting</span>
-                                        <span>Weight Gain</span>
-                                        <span>Weight Loss</span>
-                                        <span>Patches In Throat</span>
-                                        <span>Irregular Sugar Level</span>
-                                        <span>Indigestion</span>
-                                        <span>Loss of Appetite</span>
-                                        <span>Constipation</span>
-                                        <span>Abdominal Pain</span>
-                                        <span>Diarrhoea</span>
-                                        <span>Swelling of Stomach</span>
-                                        <span>Pain during bowel movements</span>
-                                        <span>Pain in anal region</span>
-                                        <span>Bloody Stool</span>
-                                        <span>Stomach Bleeding</span>
-                                        <span>Irritation in anus</span>
-                                        <span>Cramps</span>
-                                        <span>Excessive Hunger</span>
-                                        <span>Passage of Gases</span>
-                                        <span>Belly Pain</span>
-                                        <span>Increased appetite</span>
-                                        <span>Distention of abdomen</span>
-                                        <span>Nausea</span>
-                                        <span>Acute Liver Failure</span>
-                                    </div>
-                                  </div>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-                <td>
-                    <p>Respiratory System (Lungs)</p>
-                    <table class = "table2">
-                        <tr>
-                            
-                            <td>
-                                <div class="dropdown">
-                                    <input type="button" class="dropdown-btn" value="Select Symptoms">
-                                    <div class="dropdown-content">
-                                        <span>Continuous sneezing</span>
-                                        <span>Cough</span>
-                                        <span>Breathlessness</span>
-                                        <span>Runny Nose</span>
-                                        <span>Congestion</span>
-                                        <span>Sinus Pressure</span>
-                                        <span>Patches In Throat</span>
-                                        <span>Phlegm</span>
-                                        <span>Throat Irritation</span>
-                                        <span>Loss of Smell</span>
-                                        <span>Mucoid Sputum</span>
-                                        <span>Rusty Sputum</span>
-                                        <span>Blood in Sputum</span>
-                                    </div>
-                                  </div>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-                <td>
-                    <p>Related to eyes</p>
-                    <table class = "table2">
-                        <tr>
-                            <td>
-                                <div class="dropdown">
-                                    <input type="button" class="dropdown-btn" value="Select Symptoms">
-                                    <div class="dropdown-content">
-                                        <span>Sunken Eyes</span>
-                                        <span>Pain Behind the Eyes</span>
-                                        <span>Yellowing of Eyes</span>
-                                        <span>Blurred and Distorted Vision</span>
-                                        <span>Redness of Eyes</span>
-                                        <span>Watering from eyes</span>
-                                        <span>Visual Disturbances</span>
-                                    </div>
-                                  </div>
-                            </td>
-                            
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-            
-            <tr>
-                <td>
-                    <p>Musculoskeletal System (Muscles, Bones)</p>
-                    <table class = "table2">
-                        <tr>
-                            
-                            <td>
-                                <div class="dropdown">
-                                    <input type="button" class="dropdown-btn" value="Select Symptoms">
-                                    <div class="dropdown-content">
-                                        <span>Joint Pain</span>
-                                        <span>Muscle Wasting</span>
-                                        <span>Weakness in Limbs</span>
-                                        <span>Cramps</span>
-                                        <span>Knee Pain</span>
-                                        <span>Hip Joint Pain</span>
-                                        <span>Muscle Weakness</span>
-                                        <span>Stiff Neck</span>
-                                        <span>Swelling Joints</span>
-                                        <span>Movement Stiffness</span>
-                                        <span>Muscle Pain</span>
-                                        <span>Painful Walking</span>
-                                    </div>
-                                  </div>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-                <td>
-                    <p>Related to body temperature</p>
-                    <table class = "table2">
-                        <tr>
-                            <td>
-                                <div class="dropdown">
-                                    <input type="button" class="dropdown-btn" value="Select Symptoms">
-                                    <div class="dropdown-content">
-                                        <span>Shivering</span>
-                                        <span>Chills</span>
-                                        <span>High Fever</span>
-                                        <span>Mild Fever</span>
-                                        <span>Sweating</span>
-                                        
-                                    </div>
-                                  </div>
-                            </td>
-                            
-
-                        </tr>
-                    </table>
-                </td>
-                <td>
-                    <p>Urinary System</p>
-                    <table class = "table2">
-                        <tr>
-                            <td>
-                                <div class="dropdown">
-                                    <input type="button" class="dropdown-btn" value="Select Symptoms">
-                                    <div class="dropdown-content">
-                                        <span>Burning Micturition</span>
-                                        <span>Spotting Urination</span>
-                                        <span>Dark urine</span>
-                                        <span>Yellow Urine</span>
-                                        <span>Bladder Discomfort</span>
-                                        <span>Foul Smell of Urine</span>
-                                        <span>Continuous Feel of Urine</span>
-                                        <span>Polyuria</span>
-                                        
-                                    </div>
-                                  </div>
-                            </td>
-                            
-                        </tr>
-                    </table>
-                </td>
-                <td>
-                    <p>Related to emotions or energy levels</p>
-                    <table class = "table2">
-                        <tr>
-                            <td>
-                                <div class="dropdown">
-                                    <input type="button" class="dropdown-btn" value="Select Symptoms">
-                                    <div class="dropdown-content">
-                                        <span>Anxiety</span>
-                                        <span>Lethargy</span>
-                                        <span>Depression</span>
-                                        <span>Irritability</span>
-                                        <span>Fatigue</span>
-                                        <span>Restlessness</span>
-                                        <span>Mood Swings</span>
-                                    </div>
-                                  </div>
-                            </td>
-                            
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-            <table class = "table3">
+        <form method="POST" action="/submit_symptoms">
+            <table class = "table2">
                 <tr>
                     <td>
-                        <p>Circulatory System (Heart, Veins)</p>
+                        <p>Integumentary System (Skin, Hair)</p>
+
                         <table class = "table2">
                             <tr>
                                 
                                 <td>
-                                    <div class="dropdown">
-                                        <input type="button" class="dropdown-btn" value="Select Symptoms">
-                                        <div class="dropdown-content">
-                                            <span>Irregular Sugar Levels</span>
-                                            <span>Fast Heart Rate</span>
-                                            <span>Swollen Blood Vessels</span>
-                                            <span>Recieving Blood Transfusion</span>
-                                            <span>Recieving Unsterile Injections</span>
-                                            <span>Prominent Veins on Calf</span>
-                                            <span>Palpitations</span>
+                                    
+                                        <div class="custom-select" style="width:200px;">
+                                            <select name="integumentary">
+                                                <option value="">Select a symptom</option>
+                                                <option value="itching">Itching</option>
+                                                <option value="skin_rash">Skin Rash</option>
+                                                <option value="nodal_skin_eruptions">Nodal Skin Eruptions</option>
+                                                <option value="cold_hands_and_feets">Cold Hands and Feet</option>
+                                                <option value="yellowish_skin">Yellowish Skin</option>
+                                                <option value="puffy_face_and_eyes">Puffy Face and Eyes</option>
+                                                <option value="brittle_nails">Brittle Nails</option>
+                                                <option value="swollen_extremeties">Swollen Extremeties</option>
+                                                <option value="blister">Blister</option>
+                                                <option value="inflammatory_nails">Inflammatory Nails</option>
+                                                <option value="small_dents_in_nails">Small Dents in Nails</option>
+                                                <option value="skin_peeling">Skin Peeling</option>
+                                                <option value="pus_filled_pimples">Pus Filled Pimples</option>
+                                                <option value="blackheads">Blackheads</option>
+                                                <option value="scurring">Scurring</option>
+                                                <option value="red_spots_over_body">Red Spots Over Body</option>
+                                                <option value="dischromic_patches">Dischromic Patches</option>
+                                            </select>
                                         </div>
-                                      </div>
+                                        
+                                    
+                                    
                                 </td>
                             </tr>
                         </table>
+
                     </td>
-                    <!--
                     <td>
-                        <p>Other Symptoms</p>
+                        <p>Digestive System (Stomach, Liver)</p>
+                        <table class = "table2">
+                            <tr>
+                                
+                                <td>
+                                    <div class="custom-select" style="width:200px;">
+                                        <select name="digestive">
+                                            <option value="">Select a symptom</option>
+                                            <option value="stomach_pain">Stomach Pain</option>
+                                            <option value="acidity">Acidity</option>
+                                            <option value="ulcers_on_tongue">Ulcers on Tongue</option>
+                                            <option value="vomiting">Vomiting</option>
+                                            <option value="weight_gain">Weight Gain</option>
+                                            <option value="weight_loss">Weight Loss</option>
+                                            <option value="patches_in_throat">Patches In Throat</option>
+                                            <option value="irregular_sugar_level">Irregular Sugar Level</option>
+                                            <option value="indigestion">Indigestion</option>
+                                            <option value="loss_of_appetite">Loss of Appetite</option>
+                                            <option value="constipation">Constipation</option>
+                                            <option value="abdominal_pain">Abdominal Pain</option>
+                                            <option value="diarrhoea">Diarrhoea</option>
+                                            <option value="swelling_of_stomach">Swelling of Stomach</option>
+                                            <option value="pain_during_bowel_movements">Pain during bowel movements</option>
+                                            <option value="pain_in_anal_region">Pain in anal region</option>
+                                            <option value="bloody_stool">Bloody Stool</option>
+                                            <option value="stomach_bleeding">Stomach Bleeding</option>
+                                            <option value="irritation_in_anus">Irritation in Anus</option>
+                                            <option value="cramps">Cramps</option>
+                                            <option value="excessive_hunger">Excessive Hunger</option>
+                                            <option value="passage_of_gases">Passage of Gases</option>
+                                            <option value="belly_pain">Belly Pain</option>
+                                            <option value="increased_appetite">Increased appetite</option>
+                                            <option value="distention_of_abdomen">Distention of abdomen</option>
+                                            <option value="nausea">Nausea</option>
+                                            <option value="acute_liver_failure">Acute Liver Failure</option>
+                                        </select>
+                                    </div>
+
+                                    
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <p>Respiratory System (Lungs)</p>
+                        <table class = "table2">
+                            <tr>
+                                
+                                <td>
+                                    <div class="custom-select" style="width:200px;">
+                                        <select name="respiratory">
+                                            <option value="">Select a symptom</option>
+                                            <option value="continuous_sneezing">Continuous sneezing</option>
+                                            <option value="cough">Cough</option>
+                                            <option value="breathlessness">Breathlessness</option>
+                                            <option value="runny_nose">Runny Nose</option>
+                                            <option value="congestion">Congestion</option>
+                                            <option value="sinus_pressure">Sinus Pressure</option>
+                                            <option value="patches_in_throat">Patches In Throat</option>
+                                            <option value="phlegm">Phlegm</option>
+                                            <option value="throat_irritation">Throat Irritation</option>
+                                            <option value="loss_of_smell">Loss of Smell</option>
+                                            <option value="mucoid_sputum">Mucoid Sputum</option>
+                                            <option value="rusty_sputum">Rusty Sputum</option>
+                                            <option value="blood_in_sputum">Blood in Sputum</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <p>Related to eyes</p>
                         <table class = "table2">
                             <tr>
                                 <td>
-                                    <div class="dropdown">
-                                        <input type="button" class="dropdown-btn" value="Select Symptoms">
-                                        <div class="dropdown-content">
-                                            <span>Option 1</span>
-                                            <span>Option 2</span>
-                                            <span>Option 3</span>
-                                        </div>
-                                      </div>
+                                    <div class="custom-select" style="width:200px;">
+                                        <select name="eyes">
+                                            <option value="">Select a symptom</option>
+                                            <option value="sunken_eyes">Sunken Eyes</option>
+                                            <option value="pain_behind_the_eyes">Pain Behind the Eyes</option>
+                                            <option value="yellowing_of_eyes">Yellowing of Eyes</option>
+                                            <option value="blurred_and_distorted_vision">Blurred and Distorted Vision</option>
+                                            <option value="redness_of_eyes">Redness of Eyes</option>
+                                            <option value="watering_from_eyes">Watering from eyes</option>
+                                            <option value="visual_disturbances">Visual Disturbances</option>
+                                        </select>
+                                    </div>
                                 </td>
                                 
                             </tr>
                         </table>
                     </td>
-                    -->
                 </tr>
                 
-            </table>
+                <tr>
+                    <td>
+                        <p>Musculoskeletal System (Muscles, Bones)</p>
+                        <table class = "table2">
+                            <tr>
+                                
+                                <td>
+                                    <div class="custom-select" style="width:200px;">
+                                        <select name="muscles">
+                                            <option value="">Select a symptom</option>
+                                            <option value="joint_pain">Joint Pain</option>
+                                            <option value="muscle_wasting">Muscle Wasting</option>
+                                            <option value="weakness_in_limbs">Weakness in Limbs</option>
+                                            <option value="cramps">Cramps</option>
+                                            <option value="knee_pain">Knee Pain</option>
+                                            <option value="hip_joint_pain">Hip Joint Pain</option>
+                                            <option value="muscle_weakness">Muscle Weakness</option>
+                                            <option value="stiff_neck">Stiff Neck</option>
+                                            <option value="swelling_joints">Swelling Joints</option>
+                                            <option value="movement_stiffness">Movement Stiffness</option>
+                                            <option value="muscle_pain">Muscle Pain</option>
+                                            <option value="painful_walking">Painful Walking</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <p>Related to body temperature</p>
+                        <table class = "table2">
+                            <tr>
+                                <td>
+                                    <div class="custom-select" style="width:200px;">
+                                        <select name="temperature">
+                                            <option value="">Select a symptom</option>
+                                            <option value="shivering">Shivering</option>
+                                            <option value="chills">Chills</option>
+                                            <option value="high_fever">High Fever</option>
+                                            <option value="mild_fever">Mild Fever</option>
+                                            <option value="sweating">Sweating</option>
+                                            
+                                        </select>
+                                    </div>
+                                </td>
+                                
 
-        </table>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <p>Urinary System</p>
+                        <table class = "table2">
+                            <tr>
+                                <td>
+                                    <div class="custom-select" style="width:200px;">
+                                        <select name="urinary">
+                                            <option value ="">Select a symptom</option>
+                                            <option value="burning_micturition">Burning Micturition</option>
+                                            <option value="spotting_urination">Spotting Urination</option>
+                                            <option value="dark_urine">Dark urine</option>
+                                            <option value="yellow_urine">Yellow Urine</option>
+                                            <option value="bladder_discomfort">Bladder Discomfort</option>
+                                            <option value="foul_smell_of_urine">Foul Smell of Urine</option>
+                                            <option value="continuous_feel_of_urine">Continuous Feel of Urine</option>
+                                            <option value="polyuria">Polyuria</option>
+                                            
+                                        </select>
+                                    </div>
+                                </td>
+                                
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <p>Related to emotions or energy levels</p>
+                        <table class = "table2">
+                            <tr>
+                                <td>
+                                    <div class="custom-select" style="width:200px;">
+                                        <select name="emotions">
+                                            <option value="">Select a symptom</option>
+                                            <option value="anxiety">Anxiety</option>
+                                            <option value="lethargy">Lethargy</option>
+                                            <option value="depression">Depression</option>
+                                            <option value="irritability">Irritability</option>
+                                            <option value="fatigue">Fatigue</option>
+                                            <option value="restlessness">Restlessness</option>
+                                            <option value="mood_swings">Mood Swings</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <table class = "table3">
+                    <tr>
+                        <td>
+                            <p>Circulatory System (Heart, Veins)</p>
+                            <table class = "table2">
+                                <tr>
+                                    
+                                    <td class="centered">
+                                        <div class="custom-select" style="width:200px;">
+                                            <select name="circulatory">
+                                                <option value="">Select a symptom</option>
+                                                <option value="irregular_sugar_level">Irregular Sugar Levels</option>
+                                                <option value="fast_heart_rate">Fast Heart Rate</option>
+                                                <option value="swollen_blood_vessels">Swollen Blood Vessels</option>
+                                                <option value="receiving_blood_transfusion">Recieving Blood Transfusion</option>
+                                                <option value="receiving_unsterile_injections">Recieving Unsterile Injections</option>
+                                                <option value="prominent_veins_on_calf">Prominent Veins on Calf</option>
+                                                <option value="palpitations">Palpitations</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <!--
+                        <td>
+                            <p>Other Symptoms</p>
+                            <table class = "table2">
+                                <tr>
+                                    <td>
+                                        <div class="dropdown">
+                                            <input type="button" class="dropdown-btn" value="Select Symptoms">
+                                            <div class="dropdown-content">
+                                                <option>Option 1</option>
+                                                <option>Option 2</option>
+                                                <option>Option 3</option>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    
+                                </tr>
+                            </table>
+                        </td>
+                        -->
+                    </tr>
+                    
+                </table>
+
+            </table>
+            <button type="submit">Submit</button>
+        </form>
 	</main>
 
 	<footer>
