@@ -61,6 +61,28 @@ def submit_symptom():
     # Do something with the selected symptom values
     return 'Selected symptoms: {}, {}, {}, {}, {}, {}, {}, {}, {}'.format(integumentary, digestive, respiratory, eyes, muscles_input, temperature, urinary, emotions, circulatory)
 
+@app.route("/submit_diabetes", methods=["POST"])
+def submit():
+  age = request.form.get("age-input")
+  excessively_hungry = request.form.get("excessively-hungry")
+  urinating_excessively = request.form.get("urinating-excessively")
+  genital_thrush = request.form.get("genital-thrush")
+  weakness = request.form.get("weakness")
+  lost_weight = request.form.get("lost-weight")
+  vision_blurred = request.form.get("vision-blurred")
+  irritable = request.form.get("irritable")
+  itchy = request.form.get("itchy")
+  delayed_healing = request.form.get("delayed-healing")
+  partial_paresis = request.form.get("partial-paresis")
+  stiff_muscles = request.form.get("stiff-muscles")
+  alopecia = request.form.get("alopecia")
+  obese = request.form.get("obese")
+  # repeat the above statements for the other checkboxes
+  
+  # do something with the submitted form data
+  return "Selected symptoms: age {}, excessively_hungry {}, urinating_excessively {}, genital_thrush {}, weakness {}, lost_weight {}, vision_blurred {}, irritable {}, itchy {}, delayed_healing {}, partial_paresis {}, stiff_muscles {}, alopecia {}, obese {}".format(age, excessively_hungry, urinating_excessively, genital_thrush, weakness, lost_weight, vision_blurred, irritable, itchy, delayed_healing, partial_paresis, stiff_muscles, alopecia, obese)
+
+
 if __name__ == '__main__':
     app.run(debug = True, port = 8000)
 
