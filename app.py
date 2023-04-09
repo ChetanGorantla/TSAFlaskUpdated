@@ -61,26 +61,65 @@ def submit_symptom():
     # Do something with the selected symptom values
     return 'Selected symptoms: {}, {}, {}, {}, {}, {}, {}, {}, {}'.format(integumentary, digestive, respiratory, eyes, muscles_input, temperature, urinary, emotions, circulatory)
 
+
+symptoms = [
+    "Age",
+    "Polyuria",
+    "Polydipsia",
+    "sudden weight loss",
+    "weakness",
+    "Polyphagia",
+    "Genital thrush",
+    "visual blurring",
+    "Itching",
+    "Irritability",
+    "delayed healing",
+    "partial paresis",
+    "muscle stiffness",
+    "Alopecia",
+    "Obesity",
+]
+
+
 @app.route("/submit_diabetes", methods=["POST"])
 def submit():
-  age = request.form.get("age-input")
-  excessively_hungry = request.form.get("excessively-hungry")
-  urinating_excessively = request.form.get("urinating-excessively")
-  genital_thrush = request.form.get("genital-thrush")
-  weakness = request.form.get("weakness")
-  lost_weight = request.form.get("lost-weight")
-  vision_blurred = request.form.get("vision-blurred")
-  irritable = request.form.get("irritable")
-  itchy = request.form.get("itchy")
-  delayed_healing = request.form.get("delayed-healing")
-  partial_paresis = request.form.get("partial-paresis")
-  stiff_muscles = request.form.get("stiff-muscles")
-  alopecia = request.form.get("alopecia")
-  obese = request.form.get("obese")
-  # repeat the above statements for the other checkboxes
+    age = request.form.get("age-input")
+    polyphagia = request.form.get("excessively-hungry")
+    polydipsia = request.form.get("excessively-thirsty")
+    polyuria = request.form.get("urinating-excessively")
+    thrush = request.form.get("genital-thrush")
+    weakness = request.form.get("weakness")
+    weight = request.form.get("lost-weight")
+    blurring = request.form.get("vision-blurred")
+    irritability = request.form.get("irritable")
+    itching = request.form.get("itchy")
+    healing = request.form.get("delayed-healing")
+    paresis = request.form.get("partial-paresis")
+    stiffness = request.form.get("stiff-muscles")
+    alopecia = request.form.get("alopecia")
+    obesity = request.form.get("obese")
+  
+    input_arr = [
+        age,
+        polyuria,
+        polydipsia,
+        weight,
+        weakness,
+        polyphagia,
+        thrush,
+        blurring,
+        itching,
+        irritability,
+        healing,
+        paresis,
+        stiffness,
+        alopecia,
+        obesity,
+    ]
+
   
   # do something with the submitted form data
-  return "Selected symptoms: age {}, excessively_hungry {}, urinating_excessively {}, genital_thrush {}, weakness {}, lost_weight {}, vision_blurred {}, irritable {}, itchy {}, delayed_healing {}, partial_paresis {}, stiff_muscles {}, alopecia {}, obese {}".format(age, excessively_hungry, urinating_excessively, genital_thrush, weakness, lost_weight, vision_blurred, irritable, itchy, delayed_healing, partial_paresis, stiff_muscles, alopecia, obese)
+    return "Selected symptoms: age {}, excessively_hungry {}, urinating_excessively {}, genital_thrush {}, weakness {}, lost_weight {}, vision_blurred {}, irritable {}, itchy {}, delayed_healing {}, partial_paresis {}, stiff_muscles {}, alopecia {}, obese {}".format(age, polyphagia, polyuria, thrush, weakness, weight, blurring, irritability, itching, healing, paresis, stiffness, alopecia, obesity)
 
 
 if __name__ == '__main__':
