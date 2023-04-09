@@ -100,8 +100,30 @@ footer {
     
     
     
+    
 }
 
+
+.table2 td{
+    text-align: left;
+}
+
+.table4 {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #fff;
+  font-size: 30px;
+  font-family: 'Poppins';
+  
+  
+  
+  
+}
+
+
+.table4 td{
+  text-align: center;
+}
 
 .table3 {
     border-collapse: collapse;
@@ -314,7 +336,7 @@ input[type="number"] {
   /*-------------------------------------------------------------------------------------*/
   /* The container must be positioned relative: */
 .custom-select {
-    position: relative;
+    text-align: left;
     font-family: Arial;
 
   }
